@@ -1,0 +1,118 @@
+UndefineClass('AR15')
+DefineClass.AR15 = {
+	__parents = { "AssaultRifle" },
+	__generated_by_class = "ModItemInventoryItemCompositeDef",
+
+
+	object_class = "AssaultRifle",
+	ScrapParts = 10,
+	Reliability = 80,
+	Icon = "UI/Icons/Weapons/AR15",
+	DisplayName = T(789754894095, --[[ModItemInventoryItemCompositeDef AR15 DisplayName]] "AR-15"),
+	DisplayNamePlural = T(531802718532, --[[ModItemInventoryItemCompositeDef AR15 DisplayNamePlural]] "AR-15s"),
+	Description = T(479173991257, --[[ModItemInventoryItemCompositeDef AR15 Description]] "Created to ensure the highest constitutional rights of self-defense and the possibility to bear a weapon that's easy as hell to convert to a fully-automatic one because a law-abiding citizen always needs one."),
+	AdditionalHint = T(829015303588, --[[ModItemInventoryItemCompositeDef AR15 AdditionalHint]] "<image UI/Conversation/T_Dialogue_IconBackgroundCircle.tga 400 130 128 120> High Crit chance\n<image UI/Conversation/T_Dialogue_IconBackgroundCircle.tga 400 130 128 120> Low attack costs\n<image UI/Conversation/T_Dialogue_IconBackgroundCircle.tga 400 130 128 120> Highly modifiable\n<image UI/Conversation/T_Dialogue_IconBackgroundCircle.tga 400 130 128 120> No Auto firing mode with standard Stock"),
+	LargeItem = 1,
+	UnitStat = "Marksmanship",
+	Cost = 4500,
+	CanAppearInShop = true,
+	Tier = 2,
+	CategoryPair = "AssaultRifles",
+	Caliber = "556",
+	Damage = 17,
+	AimAccuracy = 4,
+	CritChanceScaled = 30,
+	MagazineSize = 30,
+	PenetrationClass = 2,
+	WeaponRange = 24,
+	OverwatchAngle = 1440,
+	HandSlot = "TwoHanded",
+	Entity = "Weapon_AR15",
+	ComponentSlots = {
+		PlaceObj('WeaponComponentSlot', {
+			'SlotType', "Scope",
+			'AvailableComponents', {
+				"ScopeCOG",
+				"LROptics",
+				"LROpticsAdvanced",
+				"ThermalScope",
+				"ReflexSight",
+				"DefaultIronsight_AR15",
+				"ImprovedIronsight_AR15",
+			},
+			'DefaultComponent', "DefaultIronsight_AR15",
+		}),
+		PlaceObj('WeaponComponentSlot', {
+			'SlotType', "Magazine",
+			'AvailableComponents', {
+				"MagNormal",
+				"MagNormalFine",
+				"MagLarge",
+				"MagLargeFine",
+				"MagQuick",
+			},
+			'DefaultComponent', "MagNormal",
+		}),
+		PlaceObj('WeaponComponentSlot', {
+			'SlotType', "Barrel",
+			'AvailableComponents', {
+				"BarrelNormal",
+				"BarrelNormalImproved",
+				"BarrelShort",
+				"BarrelShortImproved",
+				"BarrelLong",
+				"BarrelLongImproved",
+			},
+			'DefaultComponent', "BarrelNormal",
+		}),
+		PlaceObj('WeaponComponentSlot', {
+			'SlotType', "Stock",
+			'AvailableComponents', {
+				"StockHeavy_AR_BurstOnly",
+				"StockLight_AR_BurstOnly",
+				"StockBump",
+			},
+			'DefaultComponent', "StockHeavy_AR_BurstOnly",
+		}),
+		PlaceObj('WeaponComponentSlot', {
+			'SlotType', "Under",
+			'CanBeEmpty', true,
+			'AvailableComponents', {
+				"GrenadeLauncher",
+				"VerticalGrip",
+				"TacGrip",
+			},
+		}),
+		PlaceObj('WeaponComponentSlot', {
+			'SlotType', "Side",
+			'CanBeEmpty', true,
+			'AvailableComponents', {
+				"Flashlight_PSG_M1",
+				"FlashlightDot_PSG_M1",
+				"LaserDot_PSG_M1",
+				"UVDot_PSG_M1",
+			},
+		}),
+		PlaceObj('WeaponComponentSlot', {
+			'SlotType', "Muzzle",
+			'CanBeEmpty', true,
+			'AvailableComponents', {
+				"Compensator",
+				"ImprovisedSuppressor",
+				"Suppressor",
+				"MuzzleBooster",
+			},
+			'DefaultComponent', "Compensator",
+		}),
+	},
+	HolsterSlot = "Shoulder",
+	AvailableAttacks = {
+		"BurstFire",
+		"SingleShot",
+		"CancelShot",
+		"UnarmedAttack",
+	},
+	ShootAP = 5000,
+	ReloadAP = 3000,
+}
+
