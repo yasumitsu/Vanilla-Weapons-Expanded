@@ -1,12 +1,15 @@
 return PlaceObj('ModDef', {
 	'title', "Vanilla Weapons Expanded",
 	'description', '[h1]Vanilla Weapons Expanded[/h1]\n[h2]Overview[/h2]\nExpands over the vanilla weapons adding more components slots, ammo, combat actions\n[h3]Affected items[/h3]\n[list]\n    [*]Unarmed and Unarmed Infected (now can be scrapped)\n    [*]M24 (added side2 and side3 slots)\n    [*]AA12 (added side2 and side3 slots)\n    [*]MG42 (added muzzle and barrel slots)\n    [*]M16, M14, Galil, G36, PSG1, M4, M41 (added side2 slot)\n    [*]BarretM82 (added side slot)\n    [*]Almost all core components\n    [*]All affected items retain the same status as the vanilla (damage, bonuses, damage) except for one item, Tactical Device, now no longer illuminates the wielder but only illuminates the target at 3+ aim\n[/list]\n[h3][i]Ammo changes[/i][/h3]\n[list]\n    [*]All tracer ammo adds "range modifier +1" for small caliber "+2" for large ones\nnew ammo\n    [*]Incendiary versions of 40mm grenade and mortar shell (sound effects are the same as molotov because I don\'t know how to change it)\n[/list]\n[h3][i]Combat actions[/i][/h3]\n- Almost all weapons now can use "unarmed" (it enables unarmed attacks because doesn\'t makes sense to me that you can\'t hit someone with the stock of your weapon, the aim animation looks like a point blank shot, but it will deliver a punch)\n[hr][/hr]\n[h3]Related Mods[/h3]\n[list]\n	[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3238572469] Vanilla Weapons Expanded - Quest Items [/url]\n	[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3238744119] Enhanced Kompositum [/url]\n[/list]',
-	'image', "Mod/sxsAC7j/Images/Screenshot 2024-04-08 161609.jpg",
-	'last_changes', "- updated description",
-	'id', "sxsAC7j",
+	'image', "Mod/WeaponsExpanded/Images/Screenshot 2024-04-08 161609.jpg",
+	'external_links', {
+		"https://github.com/yasumitsu/Vanilla-Weapons-Expanded",
+	},
+	'last_changes', "- added slug to shotguns",
+	'id', "WeaponsExpanded",
 	'author', "Sir Ni",
 	'version_major', 2,
-	'version', 269,
+	'version', 281,
 	'lua_revision', 233360,
 	'saved_with_revision', 350233,
 	'code', {
@@ -24,13 +27,13 @@ return PlaceObj('ModDef', {
 		"InventoryItem/MG42.lua",
 		"InventoryItem/Bereta92.lua",
 		"InventoryItem/M16A2.lua",
+		"InventoryItem/DesertEagle.lua",
 		"InventoryItem/M14SAW.lua",
 		"InventoryItem/ColtAnaconda.lua",
 		"InventoryItem/Galil.lua",
 		"InventoryItem/FNFAL.lua",
 		"InventoryItem/AUG.lua",
 		"InventoryItem/G36.lua",
-		"InventoryItem/Reanimationsset.lua",
 		"InventoryItem/PSG1.lua",
 		"InventoryItem/AK74.lua",
 		"InventoryItem/M4Commando.lua",
@@ -43,12 +46,11 @@ return PlaceObj('ModDef', {
 		"InventoryItem/Unarmed_Infected.lua",
 		"InventoryItem/_556_Tracer.lua",
 		"InventoryItem/FNFiveSeven.lua",
-		"Code/Script.lua",
 	},
 	'default_options', {},
 	'has_data', true,
-	'saved', 1717337409,
-	'code_hash', 609193549666947431,
+	'saved', 1719353494,
+	'code_hash', -3271138558187698239,
 	'affected_resources', {
 		PlaceObj('ModResourcePreset', {
 			'Class', "WeaponComponent",
@@ -362,6 +364,11 @@ return PlaceObj('ModDef', {
 		}),
 		PlaceObj('ModResourcePreset', {
 			'Class', "InventoryItemCompositeDef",
+			'Id', "DesertEagle",
+			'ClassDisplayName', "Inventory item",
+		}),
+		PlaceObj('ModResourcePreset', {
+			'Class', "InventoryItemCompositeDef",
 			'Id', "M14SAW",
 			'ClassDisplayName', "Inventory item",
 		}),
@@ -388,11 +395,6 @@ return PlaceObj('ModDef', {
 		PlaceObj('ModResourcePreset', {
 			'Class', "InventoryItemCompositeDef",
 			'Id', "G36",
-			'ClassDisplayName', "Inventory item",
-		}),
-		PlaceObj('ModResourcePreset', {
-			'Class', "InventoryItemCompositeDef",
-			'Id', "Reanimationsset",
 			'ClassDisplayName', "Inventory item",
 		}),
 		PlaceObj('ModResourcePreset', {

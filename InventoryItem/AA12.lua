@@ -95,6 +95,8 @@ DefineClass.AA12 = {
 		"Buckshot",
 		"CancelShotCone",
 		"UnarmedAttack",
+		"SingleShot",
+		"BurstFire",
 	},
 	ShootAP = 5000,
 	ReloadAP = 3000,

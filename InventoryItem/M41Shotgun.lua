@@ -82,6 +82,7 @@ DefineClass.M41Shotgun = {
 		"Buckshot",
 		"CancelShotCone",
 		"UnarmedAttack",
+		"SingleShot",
 	},
 	ShootAP = 5000,
 	ReloadAP = 3000,
