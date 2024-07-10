@@ -9,7 +9,7 @@ return PlaceObj('ModDef', {
 	'id', "WeaponsExpanded",
 	'author', "Sir Ni",
 	'version_major', 2,
-	'version', 281,
+	'version', 291,
 	'lua_revision', 233360,
 	'saved_with_revision', 350233,
 	'code', {
@@ -49,8 +49,8 @@ return PlaceObj('ModDef', {
 	},
 	'default_options', {},
 	'has_data', true,
-	'saved', 1719353494,
-	'code_hash', -3271138558187698239,
+	'saved', 1720085664,
+	'code_hash', 8092167892923632564,
 	'affected_resources', {
 		PlaceObj('ModResourcePreset', {
 			'Class', "WeaponComponent",
